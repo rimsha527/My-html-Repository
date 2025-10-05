@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color:lightcoral;
+        }
+         .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 250px);
+            grid-gap: 15px;
+         }
+
+         @media (max-width: 768px){
+            .container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+         }
+
+         @media (max-width: 320px){
+            .container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+         }
+
+         .box{
+            background-color: aquamarine;
+            height: 250px;
+            width: 485px;
+            border-radius: 8px;
+            background-position: center;
+        }
+
+        .box:hover{
+            border: 4px solid black;
+            box-shadow: 10px 5px 5px rgb(228, 147, 40);
+
+        }
+
+        #box1{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3AfDPcknRcneZvGRqxrX487Sg6IcumKtKqmgYNzMLmR6LNsKXiYskfeonZLEp2NYYTnc&usqp=CAU");
+            background-size: cover;
+        }
+
+        #box2{
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/028/115/207/small_2x/cute-dog-on-pet-themed-background-ai-generative-free-photo.jpg");
+            background-size: cover;
+        }      
+
+
+        #box3{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzsVZt5UhmP8m0Ph_uSnM0_EIZqxQTSxVjl7Ox7X7esMul-Uqf7RADo87MVNOY6psonn0&usqp=CAU");
+            background-size: cover;
+        }  
+       
+
+        #box4{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgsid-Gro5rdZAh7FJcFeqI4tGOoOX0afJoNhKO5J6f1YkDHZOAro5zpISP7cIFqHBJQk&usqp=CAU");
+            background-size: cover;
+        }  
+
+
+        #box5{
+            background-image: url("https://hips.hearstapps.com/hmg-prod/images/small-fluffy-dog-breeds-maltipoo-66300ad363389.jpg?crop=0.8872133207665724xw:1xh;center,top&resize=1200:*");
+            background-size: cover;
+        }      
+
+
+        #box6{
+            background-image: url("https://www.thesprucepets.com/thmb/2UwjgjwzNy8vmVQ1uVcPqtpDHIE=/5472x0/filters:no_upscale():strip_icc()/spruce-pets-maltese-white-dog-breeds-35c6531aed4f425aba9ceab5547249f3.jpg");
+            background-size: cover;
+        }  
+
+
+        #box7{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw49_ivHl-Wmd7Ac_pTFwofgYljBERiZk1CQ0UUTObG1f0cwwzn7oiLE9ds7tTPJwfx6I&usqp=CAU");
+            background-size: cover;
+        }  
+
+        #box8{
+            background-image: url("https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_1280.jpg");
+            background-size: cover;
+        }  
+
+
+        #box9{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/008/951/892/non_2x/cute-puppy-pomeranian-mixed-breed-pekingese-dog-run-on-the-grass-with-happiness-photo.jpg");
+            background-size: cover;
+        }  
+       
+        </style>
+</head>
+<body>
+    <h1>Dog Gallery 🐶</h1>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <div class="box" id="box6"></div>
+        <div class="box" id="box7"></div>
+        <div class="box" id="box8"></div>
+        <div class="box" id="box9"></div>
+    </div>
+   
+</body>
+</html>
