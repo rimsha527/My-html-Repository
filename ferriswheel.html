@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>Ferris Wheel</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #87ceeb;
+      margin: 0;
+    }
+
+    .ferris-wheel {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .wheel {
+      width: 100%;
+      height: 100%;
+      border: 8px solid #333;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 12s linear infinite;
+      transform-origin: center;
+    }
+
+    /* spokes */
+    .spoke {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      width: 2px;
+      height: 50%;
+      background: #333;
+      transform-origin: bottom center;
+    }
+
+    /* create 8 spokes */
+    .spoke:nth-child(1) { transform: rotate(0deg); }
+    .spoke:nth-child(2) { transform: rotate(45deg); }
+    .spoke:nth-child(3) { transform: rotate(90deg); }
+    .spoke:nth-child(4) { transform: rotate(135deg); }
+    .spoke:nth-child(5) { transform: rotate(180deg); }
+    .spoke:nth-child(6) { transform: rotate(225deg); }
+    .spoke:nth-child(7) { transform: rotate(270deg); }
+    .spoke:nth-child(8) { transform: rotate(315deg); }
+
+    /* cabins */
+    .cabin {
+      width: 40px;
+      height: 40px;
+      background-color: red;
+      border-radius: 5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -20px;
+    }
+
+    /* place cabins evenly around */
+    .cabin1 { transform: rotate(0deg) translateY(-180px) rotate(0deg); }
+    .cabin2 { transform: rotate(45deg) translateY(-180px) rotate(-45deg); }
+    .cabin3 { transform: rotate(90deg) translateY(-180px) rotate(-90deg); }
+    .cabin4 { transform: rotate(135deg) translateY(-180px) rotate(-135deg); }
+    .cabin5 { transform: rotate(180deg) translateY(-180px) rotate(-180deg); }
+    .cabin6 { transform: rotate(225deg) translateY(-180px) rotate(-225deg); }
+    .cabin7 { transform: rotate(270deg) translateY(-180px) rotate(-270deg); }
+    .cabin8 { transform: rotate(315deg) translateY(-180px) rotate(-315deg); }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="ferris-wheel">
+    <div class="wheel">
+      <!-- Spokes -->
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+
+      <!-- Cabins -->
+      <div class="cabin cabin1"></div>
+      <div class="cabin cabin2"></div>
+      <div class="cabin cabin3"></div>
+      <div class="cabin cabin4"></div>
+      <div class="cabin cabin5"></div>
+      <div class="cabin cabin6"></div>
+      <div class="cabin cabin7"></div>
+      <div class="cabin cabin8"></div>
+    </div>
+    </div>
+</body>
+</html>
