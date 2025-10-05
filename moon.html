@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <style> body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+       
+
+        .container {
+            display:flex;
+            background-color:black;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .blue-ball {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            border-radius: 50%;
+        }
+
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            animation: rotate 4s linear infinite;
+        }
+
+        .white-ball {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="blue-ball"></div>
+        <div class="orbit">
+            <div class="white-ball"></div>
+        </div>
+    </div>
+
+</body>
+</html>
